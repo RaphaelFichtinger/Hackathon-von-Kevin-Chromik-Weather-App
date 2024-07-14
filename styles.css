@@ -143,6 +143,11 @@ body{
 
 #minmaxContainer{
     margin: 0;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand-Medium';
 }
 
 #grill-img {
@@ -174,6 +179,15 @@ body{
     background-position: center;
 }
 
+
+
+.backgroundClassSun{
+    background-color: rgb(255, 187, 27) !important;
+}
+
+.backgroundClassRain {
+    background-color: rgb(119, 150, 255) !important;
+}
 
 
 
@@ -246,3 +260,9 @@ body{
     font-family: 'Quicksand-Medium';
     src: url(./assets/fonts/Quicksand-Medium.ttf);
 }
+
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url(./assets/fonts/Quicksand-Regular.ttf);
+}
+

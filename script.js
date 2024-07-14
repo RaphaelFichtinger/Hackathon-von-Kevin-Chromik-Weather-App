@@ -26,10 +26,13 @@ async function getWeatherInfo(lat, lon, cityName) {
         const date = data.daily.time[index];
         const weatherCode = data.daily.weather_code[index];
         let imageURL = chooseImage(weatherCode);
+        let txt = chooseText(weatherCode);
+        let style = chooseBg(weatherCode);
         let subcontainer =  document.getElementById(`sub-bottom-container${index}`)
         subcontainer.classList.remove("d-none");
         subcontainer.innerHTML = 
-        `<p id="minmaxContainer">min. ${daymin}  °C<br>-<br> max. ${daymax} °C</p> <br> ${date}<br><br> <img id="grill-img" src="${imageURL}">`;
+        `<p style="background-color:${style}" id="minmaxContainer">min. ${daymin}  °C<br>-<br> max. ${daymax} °C</p> 
+        <br> ${date}<br><p>${txt}</p> <img id="grill-img" src="${imageURL}">`;
     }
     renderWeatherData(temp, cityName);
 }
@@ -45,6 +48,24 @@ function chooseImage(weatherCode) {
         return ("./assets/barbecue.png");
     } else {
         return ("./assets/no-fire.png");
+    }
+}
+
+
+function chooseText(weatherCode) {
+    if(weatherCode < 60) {
+        return ("Sunny and clear weather");
+    } else {
+        return ("Storms or rain are expected");
+    }
+}
+
+
+function chooseBg(weatherCode) {
+    if(weatherCode < 60) {
+        return ("#E88B11");
+    } else {
+        return ("#0768E6");
     }
 }
 
