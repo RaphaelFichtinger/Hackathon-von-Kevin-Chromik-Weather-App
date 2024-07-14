@@ -31,7 +31,7 @@ async function getWeatherInfo(lat, lon, cityName) {
         let subcontainer =  document.getElementById(`sub-bottom-container${index}`)
         subcontainer.classList.remove("d-none");
         subcontainer.innerHTML = 
-        `<p style="background-color:${style}" id="minmaxContainer">min. ${daymin}  °C<br>-<br> max. ${daymax} °C</p> 
+        `<p style="background-color:${style}" id="minmaxContainer">min. ${daymin} °C - max. ${daymax} °C</p> 
         <br> ${date}<br><p>${txt}</p> <img id="grill-img" src="${imageURL}">`;
     }
     renderWeatherData(temp, cityName);

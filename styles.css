@@ -148,6 +148,9 @@ body{
     border: 1px solid gray;
     color: rgb(255, 255, 255);
     font-family: 'Quicksand-Medium';
+    font-size: 16px;
+
+    
 }
 
 #grill-img {
@@ -243,6 +246,14 @@ body{
     #sub-bottom-container5,
     #sub-bottom-container6{
         width: 320px;
+    }
+}
+
+@media (max-width:464px ) {
+    #minmaxContainer{
+        font-size: 12px;
+        height: 60px;
+        width: 80px;
     }
 }
 
