@@ -1,13 +1,6 @@
 
 
 let API_key = `66939a5e03827016457326samab6435`;
-
-// async function fetchAPI() {
-// let response = await fetch(cityAPI);
-// let data = await response.json(); 
-// console.log(data); 
-// }
-
 async function searchCity() {
 
     let inputValue = document.getElementById("cityInput").value;
